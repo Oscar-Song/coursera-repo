@@ -1,2 +1,1 @@
-# coursera-repo
-Coursera-repo
+#Homework for Week 1
