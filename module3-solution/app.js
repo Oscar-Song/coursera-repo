@@ -23,12 +23,11 @@
   function NarrowItDownController(MenuSearchService){
     var menu = this;
 
-    menu.keyword = "chicken";
+    menu.keyword = "";
     menu.found = [];
     menu.isNothingFound = false;
 
     menu.getList = function(){
-      console.log(menu.keyword == "");
       menu.isNothingFound = (menu.keyword == "");
       if(menu.keyword == ""){
         menu.found = [];
