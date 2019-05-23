@@ -1,0 +1,63 @@
+body {
+  font-size: 1.2em;
+  background-image: url("background.jpg");
+}
+
+div.home{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+div.home a{
+  font-weight: bold;
+  color: blue;
+}
+
+a[ui-sref]:hover {
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+  border: solid black 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  zoom: 1.5;
+}
+
+div.items li {
+  background-color: white;
+  width: 200px;
+  min-height: 250px;
+  border: 2px solid #000;
+  display: inline-block;
+  display: -moz-inline-stack;
+  margin: 10px;
+  padding: 5px;
+  vertical-align: top;
+  zoom: 1;
+}
+
+div.itemName{
+  color: red;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+div.itemDescripiton{
+  font-size: 15px;
+}
+
+div.categories{
+  margin: auto;
+  text-align: center;
+  border: 2px solid #000;
+  width: 400px;
+  background-color: white;
+  padding:5px;
+}
+
+div.categories li{
+  font-size: 25px;
+  list-style: inside;
+  list-style-type: none;
+}

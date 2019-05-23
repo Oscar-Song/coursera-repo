@@ -1,0 +1,10 @@
+<div class="categories" id="colorstrip">
+  <h1>CATEGORIES</h1>
+  <ul>
+    <li ng-repeat='category in categoryList.categories'>
+      <a ui-sref='items({categoryShortName : category.short_name})'>
+        {{ category.name }}
+      </a>
+    </li>
+  </ul>
+</div>
