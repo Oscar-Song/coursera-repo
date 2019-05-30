@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="text-center">
+    Your Info
+  </h2>
+  <div class="info">
+    <a class="info-redirect" ui-sref="public.signup" ng-if="infoCtrl.missingUser()">Not Signed Up Yet. Sign up Now!</a>
+
+    <div ng-if="!infoCtrl.missingUser()">
+      <p>First name:  {{infoCtrl.userInfo.firstname}}</p><br>
+      <p>Last name:  {{infoCtrl.userInfo.lastname}}</p><br>
+      <p>Email: {{infoCtrl.userInfo.email}}</p><br>
+      <p>Phone: {{infoCtrl.userInfo.phone}}</p><br>
+      <br>
+      <h3>Favorite dish: {{infoCtrl.userInfo.item.name}}</h3><br>
+      <p>{{infoCtrl.userInfo.item.description}}</p><br>
+      <img class="img-responsive" width="500" height="300" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.userInfo.item.short_name}}.jpg" alt="{{infoCtrl.menuItem.name}}">
+    </div>
+  </div>
+
+
+
+</div>

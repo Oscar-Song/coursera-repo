@@ -1,0 +1,48 @@
+<div class="signUpForm" ng-controller="SignUpController as $ctrl" style="text-align:center">
+  <fieldset>
+    <legend style="color:white">Sign Up</legend>
+    <form name="signUpForm"  novalidate>
+      <p>First Name:<br>
+      <input class="inputField" type="text" name="firstname" placeholder="John"
+      ng-model="$ctrl.user.firstname"
+      required>
+      </p>
+      <br>
+
+      <p>Last Name:<br>
+      <input class="inputField" type="text" name="lastname" placeholder="Smith"
+      ng-model="$ctrl.user.lastname"
+      required>
+      </p>
+      <br>
+
+      <p>Phone:<br>
+      <input class="inputField" type="text" name="phone" placeholder="9999999999"
+      ng-model="$ctrl.user.phone"
+      pattern="(\d{3})(\d{3})(\d{4})">
+      <span ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">Phone must be in valid format ##########</span>
+      </p>
+      <br>
+
+      <p>Email:<br>
+      <input class="inputField" type="email" name="email" placeholder="jsmith@email.com"
+      ng-model="$ctrl.user.email"
+      required>
+      <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">Must be a valid email address!</span>
+      </p>
+      <br>
+
+      <p>Favorite Dish(as menu number):<br>
+      <input class="inputField" type="text" name="item"
+      ng-model=$ctrl.item
+      required>
+      <span ng-if="signUpForm.item.$touched && $ctrl.missingItem">No such menu number exists</span>
+      <br>
+      </p>
+
+      <button name="button" ng-disabled="signUpForm.$invalid || $ctrl.completed" ng-click="$ctrl.submit()">Submit</button>
+      <br>
+      <span ng-if="$ctrl.completed">Your information has been saved</span>
+    </form>
+  </fieldset>
+</div>
